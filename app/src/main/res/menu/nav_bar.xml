@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_bar_home_icon"
+            android:title="@string/NavBarHomeButton"/>
+        <item
+            android:id="@+id/nav_bar_login"
+            android:icon="@drawable/nav_bar_login_icon"
+            android:title="@string/NavBarLoginButton"/>
+        <item
+            android:id="@+id/nav_card_detection"
+            android:icon="@drawable/nav_bar_card_detection_icon"
+            android:title="@string/NavBarCardDetrctionButton"/>
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+             android:id="@+id/nav_bar_logout"
+             android:icon="@drawable/nav_bar_logout_icon"
+             android:title="@string/NavBarLogOutButton"/>
+        </menu>
+    </item>
+
+</menu>

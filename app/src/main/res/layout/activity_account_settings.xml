@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1"
+    tools:context=".AccountSettingsActivity">
+
+
+    <ImageButton
+        android:id="@+id/UserAvatar"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/user"
+        android:onClick="ChangeAvatarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/BirthDate"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Data urodzenia: "
+        android:textColor="@color/color1"
+        android:textSize="20sp"
+        android:onClick="ChangeBirthDateButton"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserAvatar"/>
+
+    <TextView
+        android:id="@+id/BirthTime"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Godzina urodzenia: "
+        android:textColor="@color/color1"
+        android:textSize="20sp"
+        android:onClick="ChangeBirthTimeButton"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BirthDate"/>
+    <TextView
+        android:id="@+id/Country"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Kraj urodzenia: "
+        android:textColor="@color/color1"
+        android:textSize="20sp"
+        android:onClick="ChangeBirthCountryButton"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BirthTime"/>
+
+    <TextView
+        android:id="@+id/Gender"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Płeć: "
+        android:textColor="@color/color1"
+        android:textSize="20sp"
+        android:onClick="ChangeGenderButton"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Country"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
