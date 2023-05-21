@@ -5,6 +5,7 @@ import static androidx.core.content.PermissionChecker.checkSelfPermission;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
@@ -30,6 +31,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.util.Base64;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseArray;
@@ -250,6 +252,12 @@ public class CardsRecognitionFragment extends Fragment {
                         try{
                             output = new FileOutputStream(file);
                             output.write(bytes);
+                            final String base64Image = Base64.encodeToString(bytes, Base64.DEFAULT);
+                            SendCardsImage sendCardsImage = new SendCardsImage();
+                            sendCardsImage.SendImage(base64Image, getActivity());
+                            //Intent intent = new Intent(getActivity(), DetectedCards.class);
+                            //intent.putExtra("data",data);
+                            //startActivity(intent);
                         }finally {
                             if (null != output){
                                 output.close();
@@ -262,7 +270,7 @@ public class CardsRecognitionFragment extends Fragment {
                     @Override
                     public void onCaptureCompleted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull TotalCaptureResult result) {
                         super.onCaptureCompleted(session, request, result);
-                        Toast.makeText(getActivity(), "Saved: " + file, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(), "Saved: " + file, Toast.LENGTH_SHORT).show();
                         Log.d(TAG, "" + file);
                         createCameraPreview();
                     }

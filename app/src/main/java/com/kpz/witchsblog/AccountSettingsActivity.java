@@ -40,7 +40,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
     public void ChangeBirthCountryButton(View view) {
         Toast.makeText(this, "Zmień kraj urodzenia", Toast.LENGTH_SHORT).show();
     }
-    public void ChangeGenderButton(View view) {
-        Toast.makeText(this, "Zmień płeć", Toast.LENGTH_SHORT).show();
+    public void ChangeBirthCityButton(View view) {
+        Toast.makeText(this, "Zmień miasto urodzenia", Toast.LENGTH_SHORT).show();
     }
 }

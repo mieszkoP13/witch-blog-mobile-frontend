@@ -31,7 +31,7 @@
         android:textColor="@color/color1"
         android:textSize="20sp"
         android:onClick="ChangeBirthDateButton"
-        app:cornerRadius="30dp"
+        android:radius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +54,24 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BirthDate"/>
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Email: "
+        android:textColor="@color/color1"
+        android:textSize="20sp"
+        android:onClick="ChangeBirthCityButton"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BirthTime"/>
     <TextView
         android:id="@+id/Country"
         android:layout_width="350dp"
@@ -70,25 +88,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BirthTime"/>
+        app:layout_constraintTop_toBottomOf="@+id/Email"/>
 
     <TextView
-        android:id="@+id/Gender"
+        android:id="@+id/BirthCity"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="36dp"
         android:background="@color/color2"
         android:gravity="center_vertical"
         android:padding="10dp"
-        android:text="Płeć: "
+        android:text="Miasto urodzenia: "
         android:textColor="@color/color1"
         android:textSize="20sp"
-        android:onClick="ChangeGenderButton"
         app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Country"/>
+
+    <TextView
+        android:id="@+id/Horoscope"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Znak zodiaku: "
+        android:textColor="@color/color1"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BirthCity"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
