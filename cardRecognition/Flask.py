@@ -17,8 +17,8 @@ def process():
     cardRecognitionAlgorithm()
     # for fileName in os.listdir("detected_cards/"):
     #     os.remove("detected_cards/" + fileName)
-
     # Create a response
+
     response = {
         'message': 'Card processed successfully',
     }
