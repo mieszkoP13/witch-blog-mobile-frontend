@@ -6,18 +6,19 @@ from cardRecognitionAlgorithm import cardRecognitionAlgorithm
 
 app = Flask(__name__)
 
+
 @app.route('/process', methods=['POST'])
 def process():
     encoded_photo = request.form['image']
     decoded_photo = base64.b64decode(encoded_photo)
-    with open("images/test.png","wb") as fh:
+    with open("images/test.png", "wb") as fh:
         fh.write(decoded_photo)
     cards_from_image("images/test.png")
     cardRecognitionAlgorithm()
     # for fileName in os.listdir("detected_cards/"):
     #     os.remove("detected_cards/" + fileName)
-
     # Create a response
+
     response = {
         'message': 'Card processed successfully',
     }
